@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f4eee5">
+<meta name="description" content="Explore celebration cakes and fresh bakes from Esthie Cathering Service in Accra, Ghana.">
+<title>Gallery — Esthie Cathering Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f4eee5;--paper:#fbf8f3;--ink:#28231f;--brown:#604431;--rust:#a85d3d;--line:#dfd5c8;--muted:#82776d;--shadow:0 12px 36px rgba(57,39,27,.1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.announcement{background:var(--brown);color:#fff;text-align:center;padding:10px 16px;font-size:10px;letter-spacing:.15em;text-transform:uppercase}
+.header{position:sticky;top:10px;z-index:5;display:flex;align-items:center;justify-content:space-between;width:min(94%,1440px);min-height:72px;margin:10px auto 0;padding:10px 30px;border:1px solid rgba(255,255,255,.72);border-radius:18px;background:rgba(251,248,243,.84);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);box-shadow:var(--shadow)}
+.logo{display:inline-flex;flex-direction:column;align-items:flex-start;line-height:1;font-family:"Playfair Display",serif;font-size:28px;font-weight:700;letter-spacing:.025em}
+.brand-descriptor{margin-top:5px;color:var(--rust);font-family:"DM Sans",sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.nav{display:flex;align-items:center;gap:26px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.nav a,.phone-link{transition:color .2s ease}
+.nav a:hover,.phone-link:hover{color:var(--rust)}
+.header-actions{display:flex;align-items:center;gap:16px}
+.phone-link{color:var(--brown);font-size:11px;white-space:nowrap}
+.bag-link{padding:10px 15px;border:1px solid var(--line);border-radius:3px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;transition:background .2s,color .2s}
+.bag-link:hover{background:var(--brown);color:#fff}
+.menu-toggle{display:none;border:0;background:none;color:var(--brown);font-size:23px;cursor:pointer}
+.gallery-main{width:min(1200px,88%);margin:0 auto}
+.gallery-intro{padding:88px 0 42px;text-align:center}
+.eyebrow{color:var(--rust);font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase}
+h1,h2{font-family:"Playfair Display",serif;font-weight:500}
+.gallery-intro h1{margin:15px 0 12px;font-size:clamp(44px,7vw,76px);letter-spacing:-.04em;line-height:1.04}
+.gallery-intro p{max-width:510px;margin:0 auto;color:var(--muted);font-size:14px;line-height:1.9}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px 20px;padding:8px 0 100px}
+.gallery-card{min-width:0;margin:0}
+.gallery-item{display:block;width:100%;padding:0;border:0;background:transparent;text-align:left;cursor:zoom-in}
+.gallery-item img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:5px;background:#e8ded1;box-shadow:0 8px 26px rgba(57,39,27,.1);transition:transform .35s ease,box-shadow .3s ease}
+.gallery-item:hover img,.gallery-item:focus-visible img{transform:translateY(-4px);box-shadow:0 14px 32px rgba(57,39,27,.16)}
+.gallery-item:focus-visible,.menu-toggle:focus-visible,.nav a:focus-visible,.bag-link:focus-visible,.phone-link:focus-visible{outline:2px solid var(--rust);outline-offset:4px}
+.gallery-card figcaption{padding:12px 2px 0;color:var(--brown);font-family:"Playfair Display",serif;font-size:18px}
+.cta{padding:72px 20px;background:#e9e3d9;text-align:center}
+.cta h2{margin:12px 0;font-size:clamp(36px,5vw,52px)}
+.cta p{margin:0 auto 24px;color:var(--muted);font-size:13px;line-height:1.8}
+.cta-link{display:inline-flex;padding:15px 22px;background:var(--brown);color:#fff;font-size:10px;letter-spacing:.14em;text-transform:uppercase;transition:background .2s,transform .2s}
+.cta-link:hover{transform:translateY(-2px);background:var(--rust)}
+footer{padding:28px 6%;background:#241f1b;color:#f4eee5}
+.footer-row{display:flex;justify-content:space-between;align-items:center;gap:24px;width:min(1200px,100%);margin:0 auto}
+.footer-row .logo{font-size:23px}
+.footer-row .brand-descriptor{font-size:8px}
+.footer-links{display:flex;flex-wrap:wrap;gap:22px;color:#c9bbb0;font-size:11px}
+.footer-links a:hover{color:#fff}
+.copyright{width:min(1200px,100%);margin:22px auto 0;padding-top:18px;border-top:1px solid #51443b;color:#9e8f84;font-size:10px}
+.lightbox{width:min(92vw,1000px);max-width:1000px;max-height:92vh;padding:14px;border:1px solid rgba(255,255,255,.5);border-radius:8px;background:var(--paper);box-shadow:0 24px 80px #0005}
+.lightbox::backdrop{background:rgba(29,23,19,.78);backdrop-filter:blur(5px)}
+.lightbox img{display:block;width:100%;max-height:calc(92vh - 78px);object-fit:contain}
+.lightbox-bar{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:12px 2px 0;color:var(--brown);font-family:"Playfair Display",serif;font-size:18px}
+.lightbox-close{padding:8px 12px;border:1px solid var(--line);border-radius:3px;background:transparent;color:var(--brown);font-family:"DM Sans",sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.lightbox-close:hover{background:var(--brown);color:#fff}
+@media(max-width:850px){.header{padding:10px 20px}.nav{gap:15px}.header-actions{gap:10px}.phone-link{font-size:10px}.gallery-main{width:90%}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 14px}}
+@media(max-width:620px){
+  .header{top:7px;width:calc(100% - 20px);min-height:62px;margin-top:7px;padding:8px 12px;border-radius:15px}
+  .menu-toggle{display:block}
+  .logo{font-size:23px}
+  .brand-descriptor{font-size:8px}
+  .nav{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;align-items:stretch;gap:4px;padding:14px 20px;border:1px solid rgba(255,255,255,.8);border-radius:15px;background:rgba(251,248,243,.96);box-shadow:var(--shadow)}
+  .nav.open{display:flex;flex-direction:column}
+  .nav a{padding:11px 0}
+  .header-actions{gap:8px}
+  .phone-link{display:none}
+  .bag-link{padding:9px 10px;font-size:9px}
+  .gallery-main{width:calc(100% - 32px)}
+  .gallery-intro{padding:65px 0 30px}
+  .gallery-intro p{font-size:13px}
+  .gallery-grid{gap:18px 10px;padding-bottom:65px}
+  .gallery-card figcaption{font-size:16px}
+  .footer-row{align-items:flex-start;flex-direction:column}
+  .footer-links{gap:15px}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="announcement">A little something lovely, baked fresh every day · Ofankor Barrier, Accra</div>
+<header class="header">
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="nav" aria-expanded="false">☰</button>
+  <a class="logo" href="index.html" aria-label="Esthie Cathering Service home"><span>Esthie</span><span class="brand-descriptor">Cathering Service</span></a>
+  <nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html#shop">The shop</a><a href="gallery.html" aria-current="page">Gallery</a><a href="index.html#story">Our story</a><a href="index.html#values">Our promise</a><a href="index.html#contact">Contact</a></nav>
+  <div class="header-actions"><a class="phone-link" href="tel:0204314859">0204314859</a><a class="bag-link" href="index.html#shop">Visit the shop</a></div>
+</header>
+<main class="gallery-main">
+  <section class="gallery-intro" aria-labelledby="galleryTitle">
+    <span class="eyebrow">A little look at what we make</span>
+    <h1 id="galleryTitle">Made for your<br>loveliest moments.</h1>
+    <p>From joyful birthday cakes to fresh-from-the-oven treats, every bake is made with care at Esthie Cathering Service.</p>
+  </section>
+  <section class="gallery-grid" aria-label="Bakery photo gallery">
+    <figure class="gallery-card"><button class="gallery-item" type="button" data-caption="Blue birthday cake" aria-label="View blue birthday cake"><img src="assets/gallery-blue-birthday-cake.jpeg" alt="Bright blue birthday cake decorated with piped frosting" loading="lazy" decoding="async"></button><figcaption>Blue birthday cake</figcaption></figure>
+    <figure class="gallery-card"><button class="gallery-item" type="button" data-caption="Pink celebration cake" aria-label="View pink celebration cake"><img src="assets/gallery-pink-birthday-cake.jpeg" alt="Pink frosted celebration cake with birthday decorations" loading="lazy" decoding="async"></button><figcaption>Pink celebration cake</figcaption></figure>
+    <figure class="gallery-card"><button class="gallery-item" type="button" data-caption="Butterfly birthday cake" aria-label="View butterfly birthday cake"><img src="assets/gallery-butterfly-cake.jpeg" alt="White birthday cake decorated with delicate butterfly details" loading="lazy" decoding="async"></button><figcaption>Butterfly birthday cake</figcaption></figure>
+    <figure class="gallery-card"><button class="gallery-item" type="button" data-caption="A milestone birthday cake" aria-label="View milestone birthday cake"><img src="assets/gallery-tall-birthday-cake.jpeg" alt="Tall white celebration cake for a 50th birthday" loading="lazy" decoding="async"></button><figcaption>A milestone birthday cake</figcaption></figure>
+    <figure class="gallery-card"><button class="gallery-item" type="button" data-caption="Classic white celebration cake" aria-label="View classic white celebration cake"><img src="assets/gallery-white-celebration-cake.jpeg" alt="Classic white frosted celebration cake in its box" loading="lazy" decoding="async"></button><figcaption>Classic white celebration cake</figcaption></figure>
+    <figure class="gallery-card"><button class="gallery-item" type="button" data-caption="Chocolate drip cake" aria-label="View chocolate drip cake"><img src="assets/gallery-chocolate-drip-cake.jpeg" alt="White cake finished with rich chocolate drips" loading="lazy" decoding="async"></button><figcaption>Chocolate drip cake</figcaption></figure>
+    <figure class="gallery-card"><button class="gallery-item" type="button" data-caption="A joyful birthday cake" aria-label="View joyful birthday cake"><img src="assets/gallery-birthday-cake.jpeg" alt="White birthday cake decorated with red lettering and gold pearls" loading="lazy" decoding="async"></button><figcaption>A joyful birthday cake</figcaption></figure>
+    <figure class="gallery-card"><button class="gallery-item" type="button" data-caption="Golden chocolate celebration cake" aria-label="View golden chocolate celebration cake"><img src="assets/gallery-chocolate-celebration-cake.jpeg" alt="Square white celebration cake with chocolate details and gold accents" loading="lazy" decoding="async"></button><figcaption>Golden chocolate celebration cake</figcaption></figure>
+    <figure class="gallery-card"><button class="gallery-item" type="button" data-caption="Freshly baked mini cakes" aria-label="View freshly baked mini cakes"><img src="assets/gallery-bundt-cakes.jpeg" alt="A tray of freshly baked golden mini bundt cakes" loading="lazy" decoding="async"></button><figcaption>Freshly baked mini cakes</figcaption></figure>
+    <figure class="gallery-card"><button class="gallery-item" type="button" data-caption="Blue-trimmed celebration cake" aria-label="View blue-trimmed celebration cake"><img src="assets/gallery-blue-trim-cake.jpeg" alt="White birthday cake with bright blue piped trim" loading="lazy" decoding="async"></button><figcaption>Blue-trimmed celebration cake</figcaption></figure>
+    <figure class="gallery-card"><button class="gallery-item" type="button" data-caption="Freshly baked bread rolls" aria-label="View freshly baked bread rolls"><img src="assets/gallery-fresh-buns.jpeg" alt="A basket filled with freshly baked golden bread rolls" loading="lazy" decoding="async"></button><figcaption>Freshly baked bread rolls</figcaption></figure>
+    <figure class="gallery-card"><button class="gallery-item" type="button" data-caption="Gold-lettered birthday cake" aria-label="View gold-lettered birthday cake"><img src="assets/gallery-gold-lettering-cake.jpeg" alt="White birthday cake with elegant gold lettering" loading="lazy" decoding="async"></button><figcaption>Gold-lettered birthday cake</figcaption></figure>
+    <figure class="gallery-card"><button class="gallery-item" type="button" data-caption="Blue butterfly cake" aria-label="View blue butterfly cake"><img src="assets/gallery-butterfly-celebration-cake.jpeg" alt="White celebration cake decorated with blue butterfly accents" loading="lazy" decoding="async"></button><figcaption>Blue butterfly cake</figcaption></figure>
+    <figure class="gallery-card"><button class="gallery-item" type="button" data-caption="Frozen-themed birthday cake" aria-label="View Frozen-themed birthday cake"><img src="assets/gallery-frozen-birthday-cake.jpeg" alt="White Frozen-themed birthday cake decorated with blue butterflies, snowflakes and character toppers" loading="lazy" decoding="async"></button><figcaption>Frozen-themed birthday cake</figcaption></figure>
+  </section>
+</main>
+<section class="cta">
+  <span class="eyebrow">Planning something special?</span>
+  <h2>Let's bake your idea.</h2>
+  <p>Tell us about your celebration or find your next favourite treat.</p>
+  <a class="cta-link" href="https://wa.me/233204314859" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp ↗</a>
+</section>
+<footer>
+  <div class="footer-row">
+    <a class="logo" href="index.html" aria-label="Esthie Cathering Service home"><span>Esthie</span><span class="brand-descriptor">Cathering Service</span></a>
+    <nav class="footer-links" aria-label="Footer navigation"><a href="index.html#shop">The shop</a><a href="gallery.html">Gallery</a><a href="index.html#story">Our story</a><a href="index.html#contact">Contact</a><a href="index.html#location">Ofankor Barrier, Accra</a><a href="tel:0204314859">0204314859</a></nav>
+  </div>
+  <div class="copyright">© 2026 Esthie Cathering Service. All rights reserved.</div>
+</footer>
+<dialog class="lightbox" id="lightbox" aria-label="Gallery image">
+  <img id="lightboxImage" alt="">
+  <div class="lightbox-bar"><span id="lightboxCaption"></span><button class="lightbox-close" id="lightboxClose" type="button">Close</button></div>
+</dialog>
+<script>
+const menuToggle=document.getElementById('menuToggle');
+const nav=document.getElementById('nav');
+menuToggle.addEventListener('click',()=>{
+  const isOpen=nav.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded',String(isOpen));
+  menuToggle.setAttribute('aria-label',isOpen?'Close menu':'Open menu');
+});
+nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+  nav.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded','false');
+  menuToggle.setAttribute('aria-label','Open menu');
+}));
+const lightbox=document.getElementById('lightbox');
+const lightboxImage=document.getElementById('lightboxImage');
+document.querySelectorAll('.gallery-item').forEach(button=>button.addEventListener('click',()=>{
+  const image=button.querySelector('img');
+  lightboxImage.src=image.src;
+  lightboxImage.alt=image.alt;
+  document.getElementById('lightboxCaption').textContent=button.dataset.caption;
+  lightbox.showModal();
+}));
+document.getElementById('lightboxClose').addEventListener('click',()=>lightbox.close());
+lightbox.addEventListener('click',event=>{if(event.target===lightbox)lightbox.close()});
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'){
+    nav.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded','false');
+    menuToggle.setAttribute('aria-label','Open menu');
+  }
+});
+</script>
+</body>
+</html>
